@@ -1,3 +1,4 @@
+// menu
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector(".menu-btn");
   const nav = document.querySelector(".nav");
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//language selector
 document.addEventListener("DOMContentLoaded", function () {
   const languageSelector = document.getElementById("languageSelector");
 

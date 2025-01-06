@@ -18,12 +18,13 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div class="upper">
-            <img src="assets/logo.webp" alt="Renzo" class="logo" />
+        <header role="banner" class="upper">
+            <img src="assets/logo.webp" alt="Renzo Logo" class="logo" />
             <select
                 id="languageSelector"
                 class="glass"
                 aria-label="Select language"
+                aria-live="polite"
             >
                 <option value="en">English</option>
                 <option value="es">Español</option>
@@ -31,38 +32,34 @@
             <button
                 class="menu-btn glass"
                 aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNavigation"
                 data-en="Menu"
                 data-es="Menú"
             >
                 Menu
             </button>
-            <nav class="nav">
+            <nav id="mainNavigation" class="nav" role="menu" hidden>
                 <div class="nav__menu">
                     <a
                         href="#home"
                         class="nav__link"
-                        data-en="Home"
-                        data-es="Inicio"
+                        role="menuitem"
+                        aria-current="page"
                         >Home</a
                     >
-                    <a
-                        href="#my-work"
-                        class="nav__link"
-                        data-en="My Work"
-                        data-es="Mi Trabajo"
+                    <a href="#my-work" class="nav__link" role="menuitem"
                         >My Work</a
                     >
-                    <a
-                        href="#contact"
-                        class="nav__link"
-                        data-en="Contact"
-                        data-es="Contacto"
+                    <a href="#contact" class="nav__link" role="menuitem"
                         >Contact</a
                     >
                 </div>
             </nav>
-        </div>
-        <section id="landing">
+        </header>
+
+        <section id="landing" aria-labelledby="landing-title">
+            <h1 id="landing-title" class="sr-only">Introduction</h1>
             <p>
                 <span data-en="I am a" data-es="Soy un">I am a</span>
                 <span
@@ -74,21 +71,22 @@
                 <span data-en="and" data-es="y">and</span>
                 <span class="glass" data-en="Designer" data-es="Diseñador"
                     >Designer</span
-                >
+                >.
                 <span
-                    data-en="with 5+ years of experience in design and 4+ years in coding. I specialize in creating personalized, unique solutions that prioritize"
-                    data-es="con más de 5 años de experiencia en diseño y más de 4 años en programación. Me especializo en crear soluciones personalizadas y únicas que priorizan"
+                    data-en="With 5+ years of experience in design and 4+ years in coding, I specialize in creating personalized, unique solutions that prioritize"
+                    data-es="Con más de 5 años de experiencia en diseño y más de 4 años en programación, me especializo en crear soluciones personalizadas y únicas que priorizan"
                 >
-                    with 5+ years of experience in design and 4+ years in
-                    coding. I specialize in creating personalized, unique
+                    With 5+ years of experience in design and 4+ years in
+                    coding, I specialize in creating personalized, unique
                     solutions that prioritize
                 </span>
                 <span
                     class="glass"
                     data-en="accessibility"
                     data-es="accesibilidad"
-                    >accessibility</span
                 >
+                    accessibility
+                </span>
                 <span data-en="and" data-es="y">and</span>
                 <span
                     class="glass"
@@ -106,37 +104,43 @@
                 </span>
             </p>
         </section>
-        <section id="my-work">
+
+        <section id="my-work" aria-labelledby="my-work-title">
+            <h2 id="my-work-title" class="sr-only">My Work</h2>
             <div class="container">
-                <div class="box main"></div>
-                <div class="box guide">
+                <div class="box main" aria-label="Main project showcase"></div>
+                <div class="box guide" aria-label="Guide project">
                     <p
-                        data-en="dont make me get a jobbbbbbbb"
-                        data-es="no quiero chambearrrrrrr"
+                        data-en="Don't make me get a jobbbbbbbb"
+                        data-es="No quiero chambearrrrrrr"
                     >
-                        dont make me get a jobbbbbbbb
+                        Don't make me get a jobbbbbbbb
                     </p>
                 </div>
-                <div class="box serlo"></div>
-                <div class="box rimay"></div>
-                <div class="box lit"></div>
+                <div class="box serlo" aria-label="Serlo project"></div>
+                <div class="box rimay" aria-label="Rimayninchis project"></div>
+                <div class="box lit" aria-label="Literature project"></div>
                 <div class="box email">
-                    <a href="mailto:info@byrenzo.com">
-                        <button>
-                            <div id="email">
-                                <img src="assets/mail.webp" alt="Email" />
-                                <p data-en="Contact Me" data-es="Contáctame">
-                                    Contact Me
-                                </p>
-                            </div>
-                        </button>
+                    <a
+                        href="mailto:info@byrenzo.com"
+                        class="email-link"
+                        aria-label="Email Renzo"
+                    >
+                        <div id="email">
+                            <img src="assets/mail.webp" alt="Email icon" />
+                            <p data-en="Contact Me" data-es="Contáctame">
+                                Contact Me
+                            </p>
+                        </div>
                     </a>
                 </div>
             </div>
         </section>
+
         <footer>
             <p>
-                <span data-en="by" data-es="por">by</span> Renzo P. L. |
+                <span data-en="by" data-es="por">by</span>
+                Renzo P. L. |
                 <span
                     data-en="This website code is licensed under the"
                     data-es="El código de este sitio web está licenciado bajo"
@@ -147,8 +151,12 @@
                     href="https://www.gnu.org/licenses/gpl-3.0.html"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >GPL-3.0</a
-                >. <br />
+                    aria-label="View the GPL-3.0 license"
+                >
+                    GPL-3.0 </a
+                >.
+            </p>
+            <p>
                 <span
                     data-en="Designs, logos, and trademarks are the property of Renzo P. L. and are not licensed under GPL-3.0. All rights reserved."
                     data-es="Los diseños, logotipos y marcas comerciales son propiedad de Renzo P. L. y no están licenciados bajo GPL-3.0. Todos los derechos reservados."
@@ -156,7 +164,8 @@
                     Designs, logos, and trademarks are the property of Renzo P.
                     L. and are not licensed under GPL-3.0. All rights reserved.
                 </span>
-                <br />
+            </p>
+            <p>
                 <span
                     data-en="View the source code at"
                     data-es="Ver el código fuente en"
@@ -167,10 +176,13 @@
                     href="https://github.com/bombardeenlima/byrenzo"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >GitHub</a
+                    aria-label="View the source code on GitHub"
+                >
+                    GitHub </a
                 >.
             </p>
         </footer>
+
         <script src="scripts.js"></script>
     </body>
 </html>
