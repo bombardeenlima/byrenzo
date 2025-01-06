@@ -17,6 +17,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.26);
 }
 
+section .glass {
+    padding: 0rem 0.3rem;
+}
+
 .upper {
     display: flex;
     justify-content: space-between;
@@ -100,6 +104,96 @@ body {
     margin-top: -6svh;
 }
 
-section .glass {
-    padding: 0rem 0.3rem;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". .";
+}
+
+#my-work {
+    padding: 1.5rem;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border: 1px white solid;
+    border-radius: 10px;
+}
+
+.main {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-image: url(assets/projects/hampi.webp);
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.serlo {
+    background-image: url(assets/projects/serlo.webp);
+    background-color: #e4e728;
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rimay {
+    grid-row: span 2;
+    background-image: url(assets/projects/rimay.webp);
+    background-color: #0a0a0a;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.lit {
+    background-image: url(assets/projects/lit.webp);
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.guide {
+    background-image: url(assets/projects/gradient.webp);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-weight: 300;
+    display: flex;
+    align-items: end;
+}
+.guide p {
+    padding: 10% 10% 0 10%;
+}
+
+.email button {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.email,
+.email button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email a {
+    text-decoration: none;
+}
+#email p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+#email img {
+    height: 5rem;
 }
