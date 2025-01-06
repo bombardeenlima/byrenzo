@@ -25,6 +25,8 @@ section .glass {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem;
+    max-width: 90rem;
+    margin: auto;
 }
 
 .logo {
@@ -95,13 +97,24 @@ section .glass {
     align-items: center;
     height: 100svh;
     background-image: url(assets/background.webp);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     padding: 1.5rem;
     font-size: 1.5rem;
     line-height: 2rem;
     margin-top: -6svh;
+    max-height: 60rem;
+}
+
+@media (min-width: 768px) {
+    #landing {
+        background-image: url(assets/bc-pc.webp);
+        margin-top: -15svh;
+    }
+    #landing p {
+        width: 40rem;
+    }
 }
 
 .container {
@@ -198,6 +211,34 @@ section .glass {
     height: 5rem;
 }
 
+@media (min-width: 768px) {
+    #my-work {
+        padding: 0;
+    }
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        max-width: 60rem;
+        margin: auto;
+        width: 90%;
+    }
+    .box.main {
+        grid-area: 1 / 1 / span 2 / span 2;
+    }
+
+    .box.rimay {
+        grid-area: 2 / 3 / 4 / 4;
+    }
+
+    .box.lit {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    .box.email {
+        display: none;
+    }
+}
+
 footer {
     margin: 3rem 1.5rem 1rem 1.5rem;
     border: 1px white solid;
@@ -207,6 +248,14 @@ footer {
 
 footer a {
     color: white;
+}
+
+@media (min-width: 768px) {
+    footer {
+        max-width: 58rem;
+        margin: 3rem auto 1rem auto;
+        width: 86%;
+    }
 }
 
 #languageSelector {
