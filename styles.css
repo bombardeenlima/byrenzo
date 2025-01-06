@@ -197,3 +197,14 @@ section .glass {
 #email img {
     height: 5rem;
 }
+
+footer {
+    margin: 3rem 1.5rem 1rem 1.5rem;
+    border: 1px white solid;
+    border-radius: 10px;
+    padding: 0 1rem;
+}
+
+footer a {
+    color: white;
+}
