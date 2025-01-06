@@ -17,35 +17,103 @@
         <div class="upper">
             <img src="assets/logo.webp" alt="Renzo" class="logo" />
 
-            <button class="menu-btn glass" aria-label="Open navigation menu">
+            <!-- Add language selector -->
+            <select
+                id="languageSelector"
+                class="glass"
+                aria-label="Select language"
+            >
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+
+            <button
+                class="menu-btn glass"
+                aria-label="Open navigation menu"
+                data-en="Menu"
+                data-es="Menú"
+            >
                 Menu
             </button>
             <nav class="nav">
                 <div class="nav__menu">
-                    <a href="#home" class="nav__link">Home</a>
-                    <a href="#my-work" class="nav__link">My Work</a>
-                    <a href="#contact" class="nav__link">Contact</a>
+                    <a
+                        href="#home"
+                        class="nav__link"
+                        data-en="Home"
+                        data-es="Inicio"
+                        >Home</a
+                    >
+                    <a
+                        href="#my-work"
+                        class="nav__link"
+                        data-en="My Work"
+                        data-es="Mi Trabajo"
+                        >My Work</a
+                    >
+                    <a
+                        href="#contact"
+                        class="nav__link"
+                        data-en="Contact"
+                        data-es="Contacto"
+                        >Contact</a
+                    >
                 </div>
             </nav>
         </div>
         <section id="landing">
             <p>
-                I am a <span class="glass">Wev Developer</span> and
-                <span class="glass">Designer</span> with 5+ years of experience
-                in design and 4+ years in coding. I specialize in creating
-                personalized, unique solutions that prioritize
-                <span class="glass">accessibility</span> and
-                <span class="glass">sustainability</span>. With a strong blend
-                of creativity and technical skill, I strive to deliver impactful
-                and inclusive digital experiences.
+                <span data-en="I am a" data-es="Soy un">I am a</span>
+                <span
+                    class="glass"
+                    data-en="Web Developer"
+                    data-es="Desarrollador Web"
+                    >Web Developer</span
+                >
+                <span data-en="and" data-es="y">and</span>
+                <span class="glass" data-en="Designer" data-es="Diseñador"
+                    >Designer</span
+                >
+                <span
+                    data-en="with 5+ years of experience in design and 4+ years in coding. I specialize in creating personalized, unique solutions that prioritize"
+                    data-es="con más de 5 años de experiencia en diseño y más de 4 años en programación. Me especializo en crear soluciones personalizadas y únicas que priorizan"
+                >
+                    with 5+ years of experience in design and 4+ years in
+                    coding. I specialize in creating personalized, unique
+                    solutions that prioritize
+                </span>
+                <span
+                    class="glass"
+                    data-en="accessibility"
+                    data-es="accesibilidad"
+                    >accessibility</span
+                >
+                <span data-en="and" data-es="y">and</span>
+                <span
+                    class="glass"
+                    data-en="sustainability"
+                    data-es="sostenibilidad"
+                    >sustainability</span
+                >.
+                <span
+                    data-en="With a strong blend of creativity and technical skill, I strive to deliver impactful and inclusive digital experiences."
+                    data-es="Con una sólida combinación de creatividad y habilidad técnica, me esfuerzo por ofrecer experiencias digitales impactantes e inclusivas."
+                >
+                    With a strong blend of creativity and technical skill, I
+                    strive to deliver impactful and inclusive digital
+                    experiences.
+                </span>
             </p>
         </section>
         <section id="my-work">
             <div class="container">
                 <div class="box main"></div>
                 <div class="box guide">
-                    <p>
-                        im still working on making the projects cickable lol
+                    <p
+                        data-en="im still working on making the projects clickable lol lazycore"
+                        data-es="todavía estoy trabajando en hacer que los proyectos sean clickeables jaja"
+                    >
+                        im still working on making the projects clickable lol
                         lazycore
                     </p>
                 </div>
@@ -57,7 +125,9 @@
                         <button>
                             <div id="email">
                                 <img src="assets/mail.webp" alt="Email" />
-                                <p>Contact Me</p>
+                                <p data-en="Contact Me" data-es="Contáctame">
+                                    Contact Me
+                                </p>
                             </div>
                         </button>
                     </a>
@@ -66,17 +136,33 @@
         </section>
         <footer>
             <p>
-                &copy; 2025 by Renzo P. L. | This website code is licensed under
-                the
+                <span data-en="by" data-es="por">by</span> Renzo P. L. |
+                <span
+                    data-en="This website code is licensed under the"
+                    data-es="El código de este sitio web está licenciado bajo"
+                >
+                    This website code is licensed under the
+                </span>
                 <a
                     href="https://www.gnu.org/licenses/gpl-3.0.html"
                     target="_blank"
                     rel="noopener noreferrer"
                     >GPL-3.0</a
                 >. <br />
-                Designs, logos, and trademarks are the property of Renzo P. L.
-                and are not licensed under GPL-3.0. All rights reserved. <br />
-                View the source code at
+                <span
+                    data-en="Designs, logos, and trademarks are the property of Renzo P. L. and are not licensed under GPL-3.0. All rights reserved."
+                    data-es="Los diseños, logotipos y marcas comerciales son propiedad de Renzo P. L. y no están licenciados bajo GPL-3.0. Todos los derechos reservados."
+                >
+                    Designs, logos, and trademarks are the property of Renzo P.
+                    L. and are not licensed under GPL-3.0. All rights reserved.
+                </span>
+                <br />
+                <span
+                    data-en="View the source code at"
+                    data-es="Ver el código fuente en"
+                >
+                    View the source code at
+                </span>
                 <a
                     href="https://github.com/bombardeenlima/byrenzo"
                     target="_blank"

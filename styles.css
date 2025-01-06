@@ -55,7 +55,7 @@ section .glass {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(10, 10, 10, 0.95);
+    background-color: rgba(5, 5, 5, 0.95);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,7 +106,7 @@ section .glass {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 47% 47%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem 1rem;
     grid-auto-flow: row;
@@ -207,4 +207,19 @@ footer {
 
 footer a {
     color: white;
+}
+
+#languageSelector {
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+    z-index: 1000;
+    color: white;
+    padding: 0.3rem;
+    font-family: "Geist", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+#languageSelector:focus {
+    outline: none;
 }
